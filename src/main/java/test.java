@@ -27,8 +27,11 @@ public class test {
         // 获取实例化的python对象
         PyObject pyObj = pi2.get(pythonObjName);
         // 调用python对象方法,传递参数并接收返回值
-        PyObject result = pyObj.invoke("say_words", new PyObject[] {Py.newString("hello cyp")});
-        Boolean java_result = Py.py2boolean(result);
+        //1、不传参
+        PyObject result1 = pyObj.invoke("say_hello", new PyObject[] {});
+        //2、传参
+        PyObject result2 = pyObj.invoke("say_words", new PyObject[] {Py.newString("hello cyp")});
+        Boolean java_result = Py.py2boolean(result2);
         System.out.println(java_result);
         pi2.cleanup();
         pi2.close();
