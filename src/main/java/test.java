@@ -8,7 +8,6 @@ import java.util.*;
 public class test {
     public static void main(String[] args) throws IOException {
         Properties props = new Properties();
-        props.put("python.home", "path to the Lib folder");
         props.put("python.console.encoding", "UTF-8");
         props.put("python.security.respectJavaAccessibility", "false");
         props.put("python.import.site", "false");
